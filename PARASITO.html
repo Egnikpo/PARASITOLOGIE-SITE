@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyses en Parasitologie</title>
+    
+    <style>
+        /* ====== STYLE SIMPLE ====== */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+        }
+
+        /* Menu de navigation */
+        .menu {
+            background-color: black;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            font-weight: bold;
+        }
+
+        .menu a:hover {
+            background-color: #080cf8fb;
+            border-radius: 5px;
+        }
+
+        /* Titre principal */
+        h1 {
+            color: rgb(14, 4, 70);
+            text-align: center;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #e74c3c;
+            border-bottom: 3px solid #e74c3c;
+            padding-bottom: 10px;
+        }
+
+        /* Conteneur principal */
+        .contenu {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        /* Cartes */
+        .carte {
+            background: #f9f9f9;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border-left: 5px solid #3498db;
+        }
+
+        .carte h3 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+
+        /* Tableaux */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* Listes */
+        ul, ol {
+            line-height: 1.8;
+        }
+
+        /* Boutons */
+        .bouton {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .bouton:hover {
+            background-color: #2980b9;
+        }
+
+        .bouton-vert {
+            background-color: #27ae60;
+        }
+
+        .bouton-vert:hover {
+            background-color: #219a52;
+        }
+
+        .bouton-rouge {
+            background-color: #e74c3c;
+        }
+
+        .bouton-rouge:hover {
+            background-color: #c0392b;
+        }
+
+        /* Zones de texte */
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        /* Zone de résultat */
+        .resultat {
+            background: #d4edda;
+            border: 2px solid #28a745;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            display: none;
+        }
+
+        .alerte {
+            background: #f8d7da;
+            border: 2px solid #dc3545;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        /* Footer */
+        .pied-page {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Pour mobile */
+        @media (max-width: 600px) {
+            .menu a {
+                display: block;
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== MENU DE NAVIGATION ===== -->
+<div class="menu">
+    <a href="#accueil">🏠 Accueil</a>
+    <a href="#analyses">🔬 Analyses</a>
+    <a href="#prelevement">💉 Prélèvements</a>
+    <a href="#diagnostic">🤖 Diagnostic</a>
+    <a href="#contact">📞 Contact</a>
+</div>
+
+<!-- ===== TITRE PRINCIPAL ===== -->
+<h1>🔬 LABORATOIRE D'ANALYSES EN PARASITOLOGIE</h1>
+
+<!-- ===== SECTION ACCUEIL ===== -->
+<div class="contenu" id="accueil">
+    <h2>🏠 Bienvenue</h2>
+    
+    <div class="carte">
+        <h3>Qu'est-ce que la parasitologie ?</h3>
+        <p>
+            La <strong>parasitologie</strong> est la science qui étudie les parasites 
+            (vers, protozoaires) et les maladies qu'ils provoquent.
+        </p>
+        <p>Notre laboratoire propose des <strong>analyses complètes</strong> pour détecter :</p>
+        <ul>
+            <li><strong>Protozoaires</strong> : Plasmodium (paludisme), Giardia, Entamoeba</li>
+            <li><strong>Vers intestinaux</strong> : Ascaris, Taenia, Oxyures</li>
+            <li><strong>Parasites sanguins</strong> : Filaires, Trypanosomes</li>
+        </ul>
+    </div>
+
+    <div class="carte">
+        <h3>Pourquoi faire une analyse ?</h3>
+        <ul>
+            <li>✅ Symptômes digestifs (diarrhée, douleurs abdominales)</li>
+            <li>✅ Fièvre inexpliquée après un voyage</li>
+            <li>✅ Fatigue chronique</li>
+            <li>✅ Démangeaisons anales</li>
+            <li>✅ Perte de poids inexpliquée</li>
+        </ul>
+    </div>
+</div>
+
+<!-- ===== SECTION ANALYSES ===== -->
+<div class="contenu" id="analyses">
+    <h2>🔬 Nos Analyses Parasitologiques</h2>
+
+    <div class="carte">
+        <h3>1. Coproscopie (Examen des selles)</h3>
+        <table>
+            <tr>
+                <th>Parasite recherché</th>
+                <th>Maladie</th>
+                <th>Délai</th>
+                
+            </tr>
+            <tr>
+                <td>Ascaris lumbricoides</td>
+                <td>Ascaridiose</td>
+                <td>24h</td>
+                
+            </tr>
+            <tr>
+                <td>Taenia (ver solitaire)</td>
+                <td>Téniase</td>
+                <td>24h</td>
+                
+            </tr>
+            <tr>
+                <td>Giardia lamblia</td>
+                <td>Giardiose</td>
+                <td>24h</td>
+            
+            </tr>
+            <tr>
+                <td>Entamoeba histolytica</td>
+                <td>Amibiase</td>
+                <td>48h</td>
+            
+            </tr>
+        </table>
+    </div>
+
+    <div class="carte">
+        <h3>2. Frottis sanguin (Recherche du paludisme)</h3>
+        <table>
+            <tr>
+                <th>Examen</th>
+                <th>Description</th>
+                <th>Délai</th>
+                
+            </tr>
+            <tr>
+                <td>Goutte épaisse</td>
+                <td>Recherche de Plasmodium</td>
+                <td>2h</td>
+                
+            </tr>
+            <tr>
+                <td>Frottis sanguin</td>
+                <td>Identification de l'espèce</td>
+                <td>24h</td>
+                
+            </tr>
+        </table>
+    </div>
+
+    <div class="carte">
+        <h3>3. Sérologie (Test sanguin)</h3>
+        <p>Recherche d'anticorps contre les parasites :</p>
+        <ul>
+            <li><strong>Toxoplasmose</strong> </li>
+            <li><strong>Leishmaniose</strong> </li>
+            <li><strong>Hydatidose</strong> </li>
+            <li><strong>Filariose</strong> </li>
+        </ul>
+    </div>
+</div>
+
+<!-- ===== SECTION PRÉLÈVEMENTS ===== -->
+<div class="contenu" id="prelevement">
+    <h2>💉 Comment prélever vos échantillons</h2>
+
+    <div class="carte">
+        <h3>📋 Prélèvement de selles</h3>
+        <ol>
+            <li>Uriner avant de déféquer (ne pas mélanger)</li>
+            <li>Déféquer dans un récipient propre et sec</li>
+            <li>Prélever la taille d'une noix avec la cuillère fournie</li>
+            <li>Mettre dans le pot stérile et fermer hermétiquement</li>
+            <li>Apporter au laboratoire <strong>dans les 2 heures</strong></li>
+        </ol>
+        <div class="alerte">
+            ⚠️ Important : Ne pas oublier d'étiqueter le pot avec votre nom et la date
+        </div>
+    </div>
+
+    <div class="carte">
+        <h3>🩸 Prélèvement sanguin</h3>
+        <ul>
+            <li>Se présenter au laboratoire à jeun (si possible)</li>
+            <li>Le prélèvement dure 5 minutes</li>
+            <li>Résultats disponibles sous 24 à 48 heures</li>
+        </ul>
+    </div>
+
+    <div class="carte">
+        <h3>🎯 Test de l'écouvillon anal (Oxyures)</h3>
+        <ol>
+            <li>Le matin avant la toilette</li>
+            <li>Appliquer le scotch transparent sur la marge anale</li>
+            <li>Coller sur la lame fournie</li>
+            <li>Apporter au laboratoire</li>
+        </ol>
+    </div>
+</div>
+
+<!-- ===== SECTION DIAGNOSTIC INTERACTIF ===== -->
+<div class="contenu" id="diagnostic">
+    <h2>🤖 Diagnostic rapide par symptômes</h2>
+    <p>Sélectionnez vos symptômes pour un premier avis :</p>
+
+    <div class="carte">
+        <h3>Vos symptômes :</h3>
+        
+        <label>
+            <input type="checkbox" class="symptome" value="diarrhee"> 
+            Diarrhée
+        </label><br>
+        
+        <label>
+            <input type="checkbox" class="symptome" value="fievre"> 
+            Fièvre
+        </label><br>
+        
+        <label>
+            <input type="checkbox" class="symptome" value="douleur"> 
+            Douleurs abdominales
+        </label><br>
+        
+        <label>
+            <input type="checkbox" class="symptome" value="fatigue"> 
+            Fatigue
+        </label><br>
+        
+        <label>
+            <input type="checkbox" class="symptome" value="demangeaison"> 
+            Démangeaisons anales
+        </label><br>
+        
+        <label>
+            <input type="checkbox" class="symptome" value="voyage"> 
+            Voyage en zone tropicale récent
+        </label><br>
+
+        <br>
+        <button class="bouton" onclick="diagnostiquer()">🔍 Obtenir un diagnostic</button>
+        <button class="bouton bouton-rouge" onclick="reinitialiser()">🗑️ Réinitialiser</button>
+    </div>
+
+    <div class="resultat" id="resultat-diag">
+        <h3>🔬 Résultat du diagnostic :</h3>
+        <p id="texte-resultat"></p>
+        <p id="texte-conseil"></p>
+        <p><strong>⚠️ Ce diagnostic est indicatif. Consultez toujours un médecin.</strong></p>
+    </div>
+</div>
+
+<!-- ===== SECTION CONTACT ===== -->
+<div class="contenu" id="contact">
+    <h2>📞 Nous contacter</h2>
+
+    <div class="carte">
+        <h3>📍 Adresse</h3>
+        <p>ATAKPAME</p>
+    </div>
+
+    <div class="carte">
+        <h3>📞 Téléphone</h3>
+        <p>📍 Fixe : +228 91 16 45 00</p>
+    </div>
+
+    <div class="carte">
+        <h3>🕐 Horaires</h3>
+        <p>Lundi - Dimanche : 24h/24</p>
+    </div>
+
+    <div class="carte">
+        <h3>✉️ Nous écrire</h3>
+        <form id="form-contact">
+            <label>Nom complet :</label>
+            <input type="text" id="nom" placeholder="Votre nom" required>
+
+            <label>Email :</label>
+            <input type="email" id="email" placeholder="votre@email.com" required>
+
+            <label>Message :</label>
+            <textarea id="message" rows="5" placeholder="Votre message..."></textarea>
+
+            <button type="submit" class="bouton bouton-vert">📩 Envoyer</button>
+        </form>
+        <div id="message-envoye" style="display:none; background:#d4edda; padding:15px; border-radius:5px; margin-top:15px;">
+            ✅ Message envoyé avec succès ! Nous vous répondrons dans les 24h.
+        </div>
+    </div>
+</div>
+
+<!-- ===== PIED DE PAGE ===== -->
+<div class="pied-page">
+    <p>©  Laboratoire d'Analyses en Parasitologie - Tous droits réservés</p>
+    <p>🏥 Votre santé, notre priorité</p>
+</div>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+    // ===== DIAGNOSTIC PAR SYMPTÔMES =====
+    function diagnostiquer() {
+        // Récupérer les symptômes cochés
+        const symptomes = document.querySelectorAll('.symptome:checked');
+        const listeSymptomes = Array.from(symptomes).map(s => s.value);
+        
+        // Si aucun symptôme sélectionné
+        if(listeSymptomes.length === 0) {
+            alert("Veuillez sélectionner au moins un symptôme");
+            return;
+        }
+
+        // Logique de diagnostic simple
+        let diagnostic = "";
+        let conseil = "";
+
+        if(listeSymptomes.includes('fievre') && listeSymptomes.includes('voyage')) {
+            diagnostic = "🔴 Possibilité de PALUDISME (Plasmodium)";
+            conseil = "🚨 Consultez un médecin URGENCE ! Test sanguin nécessaire.";
+        }
+        else if(listeSymptomes.includes('diarrhee') && listeSymptomes.includes('douleur')) {
+            diagnostic = "🟡 Possibilité de PARASITE INTESTINAL (Giardia, Amibe, etc.)";
+            conseil = "Analyse de selles recommandée (coproscopie).";
+        }
+        else if(listeSymptomes.includes('demangeaison')) {
+            diagnostic = "🟡 Possibilité d'OXYURES (Enterobius vermicularis)";
+            conseil = "Test du scotch anal recommandé le matin.";
+        }
+        else if(listeSymptomes.includes('diarrhee')) {
+            diagnostic = "🟡 Possibilité de GIARDIASE ou d'AMIBIASE";
+            conseil = "Analyse de selles recommandée.";
+        }
+        else if(listeSymptomes.includes('fatigue')) {
+            diagnostic = "🟡 Fatigue possiblement liée à un parasite";
+            conseil = "Bilan parasitologique complet recommandé.";
+        }
+        else {
+            diagnostic = "🟢 Aucun parasite spécifique identifié";
+            conseil = "Si les symptômes persistent, consultez un médecin.";
+        }
+
+        // Afficher le résultat
+        document.getElementById('texte-resultat').textContent = diagnostic;
+        document.getElementById('texte-conseil').textContent = "Conseil : " + conseil;
+        document.getElementById('resultat-diag').style.display = 'block';
+    }
+
+    // ===== RÉINITIALISER =====
+    function reinitialiser() {
+        // Décocher toutes les cases
+        document.querySelectorAll('.symptome').forEach(s => s.checked = false);
+        // Cacher le résultat
+        document.getElementById('resultat-diag').style.display = 'none';
+    }
+
+    // ===== FORMULAIRE DE CONTACT =====
+    document.getElementById('form-contact').addEventListener('submit', function(e) {
+        e.preventDefault(); // Empêcher l'envoi réel
+        
+        const nom = document.getElementById('nom').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        if(nom && email && message) {
+            // Afficher message de succès
+            document.getElementById('message-envoye').style.display = 'block';
+            
+            // Réinitialiser le formulaire
+            this.reset();
+            
+            // Cacher le message après 5 secondes
+            setTimeout(() => {
+                document.getElementById('message-envoye').style.display = 'none';
+            }, 5000);
+        } else {
+            alert("Veuillez remplir tous les champs");
+        }
+    });
+</script>
+
+</body>
+</html>
